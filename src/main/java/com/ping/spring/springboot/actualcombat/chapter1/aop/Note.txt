@@ -1,0 +1,33 @@
+AOP：面向切面编程，相对于OOP面向对象编程。
+
+Spring支持AspectJ的注解式切面编程。
+    1.使用@Aspect声明是一个切面。
+    2.使用@After、@Before、@Around定义建言（advice），可直接将拦截规则（切点）作为参数。
+    3.其中@After、@Before、@Around参数的拦截规则为切点（PointCut），为了使切点复用，可使用@PointCut专门定义拦截规则，然后在@After、@Before、@Around的参数中调用。
+    4.其中符合条件的每一个被拦截处为连接点（JoinPoint）。
+
+示例：
+    1.添加spring aop支持及AspectJ依赖。
+        <!-- spring aop 支持 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>5.2.4.RELEASE</version>
+        </dependency>
+
+        <!-- aspectj支持 -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>1.9.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.9.5</version>
+        </dependency>
+    2.编写拦截规则的注解。
+    3.编写被拦截类（使用注解和使用方法规则）。
+    4.编写切面。
+    5.编写配置类。
+    6.运行。

@@ -1,0 +1,4 @@
+Java配置是Spring 4.X推荐的配置方式，可以完全替代XML配置；Java配置也是Spring Boot推荐的配置方式。
+Java配置是通过@Configuration和@Bean来实现的。
+    @Configuration  声明当前类是一个配置类，相当于一个Spring配置的xml文件。
+    @Bean           注解在方法上，生命当前方法的返回值为一个Bean
