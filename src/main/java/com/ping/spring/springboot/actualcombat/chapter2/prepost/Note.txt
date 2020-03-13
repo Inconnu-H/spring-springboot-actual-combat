@@ -1,0 +1,9 @@
+Bean的初始化和销毁
+    1.Java配置方式: 使用@Bean的initMethod和destroyMethod（相当于xml配置的init-method和destroy-method）
+    2.注解方式: 利用JSR-250的@PostConstrut和@PreDestroy
+        <!-- 增加JSR250的支持 -->
+        <dependency>
+            <groupId>javax.annotation</groupId>
+            <artifactId>jsr250-api</artifactId>
+            <version>1.0</version>
+        </dependency>
