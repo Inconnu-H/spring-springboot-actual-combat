@@ -1,0 +1,24 @@
+Spring EL-Spring 表达式语言，支持在xml和注解中使用表达式，类似于JSP的EL表达式语言。
+Spring主要在注解@Value的参数中使用表达式。
+    1.注入普通字符
+    2.注入操作系统属性
+    3.注入表达式运算结果
+    4.注入其他Bean的属性
+    5.注入文件内容
+    6.注入网站内容
+    7.注入属性文件
+
+Maven默认不会将非java的文件编译到classes目录下，若要打包其他格式文件，需要在<build>元素下添加以下内容。
+    <!-- maven打包时包含以下文件 -->
+    <build>
+        <resourc`es>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.java</include>
+                    <include>**/*.txt</include>
+                    <include>**/*.properties</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
