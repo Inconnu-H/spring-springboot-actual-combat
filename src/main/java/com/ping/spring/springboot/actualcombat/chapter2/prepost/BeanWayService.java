@@ -1,5 +1,10 @@
 package com.ping.spring.springboot.actualcombat.chapter2.prepost;
 
+/**
+ * 使用@Bean形式的Bean
+ *
+ * @author Ping
+ */
 public class BeanWayService {
     public BeanWayService() {
         super();

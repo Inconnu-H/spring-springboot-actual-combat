@@ -4,11 +4,21 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * 配置类
+ *
+ * @author Ping
+ */
 @Configuration
 @ComponentScan("com.ping.spring.springboot.actualcombat.chapter2.prepost")
 public class PrePostConfig {
 
-    // initMethod和destroyMethod指定BeanWayService类的init和destroy方法在构造之后和Bean销毁之前执行。
+
+    /**
+     * initMethod和destroyMethod指定BeanWayService类的init和destroy方法在构造之后和Bean销毁之前执行。
+     *
+     * @return 返回BeanWayService类型Bean
+     */
     @Bean(initMethod = "init", destroyMethod = "destroy")
     public BeanWayService beanWayService() {
         return new BeanWayService();
