@@ -1,5 +1,10 @@
 package com.ping.spring.springboot.actualcombat.chapter2.profile;
 
+/**
+ * 示例Bean
+ *
+ * @author Ping
+ */
 public class DemoBean {
     private String content;
 

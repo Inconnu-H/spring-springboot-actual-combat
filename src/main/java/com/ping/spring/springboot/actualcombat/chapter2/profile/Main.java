@@ -2,6 +2,11 @@ package com.ping.spring.springboot.actualcombat.chapter2.profile;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+/**
+ * 运行
+ *
+ * @author Ping
+ */
 public class Main {
 
     public static void main(String[] args) {
