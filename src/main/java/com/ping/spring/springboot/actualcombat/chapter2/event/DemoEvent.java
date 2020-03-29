@@ -2,6 +2,12 @@ package com.ping.spring.springboot.actualcombat.chapter2.event;
 
 import org.springframework.context.ApplicationEvent;
 
+
+/**
+ * 自定义事件
+ *
+ * @author Ping
+ */
 public class DemoEvent extends ApplicationEvent {
 
     private String msg;
