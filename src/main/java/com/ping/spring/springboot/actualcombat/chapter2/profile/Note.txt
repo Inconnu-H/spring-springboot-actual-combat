@@ -11,7 +11,7 @@ Profile: Profile为在不同环境下使用不同的配置提供了支持（开�
                     <params-value>production</param-value>
                 </init-param>
             </servlet>
-        Servlet3.0ji以上：
+        Servlet3.0及以上：
             public class WebInit implements WebApplicationInitializer{
                 @Override
                 public void onStartup(ServletContext container> throws ServletException{
