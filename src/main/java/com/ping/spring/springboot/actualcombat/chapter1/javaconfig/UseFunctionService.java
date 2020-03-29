@@ -1,9 +1,16 @@
 package com.ping.spring.springboot.actualcombat.chapter1.javaconfig;
 
-// 此处没有使用@Service声明Bean
+/**
+ * 此处没有使用@Service声明Bean
+ *
+ * @author Ping
+ */
 public class UseFunctionService {
 
-    // 此处没有使用Autowired注解注入Bean
+
+    /**
+     * 此处没有使用Autowired注解注入Bean
+     */
     FunctionService functionService;
 
     public void setFunctionService(FunctionService functionService) {
