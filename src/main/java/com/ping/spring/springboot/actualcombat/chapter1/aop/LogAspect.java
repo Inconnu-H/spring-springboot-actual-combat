@@ -1,7 +1,6 @@
 package com.ping.spring.springboot.actualcombat.chapter1.aop;
 
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -11,18 +10,28 @@ import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Method;
 
-// 通过@Aspect注解声明一个切面
+/**
+ * 通过@Aspect注解声明一个切面
+ * 通过@Component让此切面成为Spring容器管理的Bean。
+ *
+ * @author Ping
+ */
 @Aspect
-// 通过@Component让此切面成为Spring容器管理的Bean。
 @Component
 public class LogAspect {
 
-    // 通过@PointCut注解声明切点
+    /**
+     * 通过@PointCut注解声明切点
+     */
     @Pointcut("@annotation(com.ping.spring.springboot.actualcombat.chapter1.aop.Action)")
     public void annotationPointCut() {
     }
 
-    // 通过@After注解声明一个建言，并使用@PointCut定义的切点。
+    /**
+     * 通过@After注解声明一个建言，并使用@PointCut定义的切点。
+     *
+     * @param joinPoint JoinPoint对象封装了SpringAop中切面方法的信息
+     */
     @After("annotationPointCut()")
     public void after(JoinPoint joinPoint) {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
@@ -32,7 +41,11 @@ public class LogAspect {
         System.out.println("注解式拦截 " + action.name());
     }
 
-    // 通过@Before注解声明一个建言，此建言直接使用拦截规则作为参数。
+    /**
+     * 通过@Before注解声明一个建言，此建言直接使用拦截规则作为参数。
+     *
+     * @param joinPoint JoinPoint对象封装了SpringAop中切面方法的信息
+     */
     @Before("execution(* com.ping.spring.springboot.actualcombat.chapter1.aop.DemoMethodService.*(..))")
     public void before(JoinPoint joinPoint) {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();

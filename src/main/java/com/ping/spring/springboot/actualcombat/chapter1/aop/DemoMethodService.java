@@ -2,6 +2,9 @@ package com.ping.spring.springboot.actualcombat.chapter1.aop;
 
 import org.springframework.stereotype.Service;
 
+/**
+ * @author Ping
+ */
 @Service
 public class DemoMethodService {
 
